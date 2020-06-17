@@ -13,7 +13,7 @@ class LoginForm extends Form {
     schema = {
         username: Joi.string()
             .required()
-            .label("Username"),
+            .label("Email"),
         password: Joi.string()
             .required()
             .label("Password")
@@ -43,7 +43,7 @@ class LoginForm extends Form {
                 <div>
                     <h1 className="text-center">Login</h1>
                     <form onSubmit={this.handleSubmit}>
-                        {this.renderInput("username", "Username")}
+                        {this.renderInput("username", "Email")}
                         {this.renderInput("password", "Password", "password")}
                         {this.renderButton("Login")}
                     </form>
